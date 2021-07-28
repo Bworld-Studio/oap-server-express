@@ -6,7 +6,6 @@ const Client = require('../../models/Client')
 // Get all Clients
 const getClients = (search) => {
 	return new Promise((resolve, reject) => {
-		let res = undefined
 		if ( search != undefined ) {	// Search API
 			let query = {
 				[Op.or]: [
@@ -17,26 +16,35 @@ const getClients = (search) => {
 			}
 			Client.clients.findAll( { where: query } )
 				.then(clients => {
-
 					resolve(clients)
-					// res.json(clients)
-					// console.log(res.j)
 				})
-				.catch(err => { res.send('Error: ' + err) })
+				.catch(err => { reject('Error: ' + err) })
 		}
 		else {
 			Client.clients.findAll()
 				.then(clients => {
-					console.log(clients)
 					resolve(clients)
 				})
-				.catch(err => { res.send('Error: ' + err) })
+				.catch(err => { reject('Error: ' + err) })
 		}
 	})
 }
 
-const searchClients = () => {
-
+const searchClients = (search) => {
+	return new Promise((resolve, reject) => {
+		let query = {
+			[Op.or]: [
+				{ numSS: { [Op.like]: search + '%' } },
+				{ lastName: { [Op.like]: search + '%' } },
+				{ firstName: { [Op.like]: search + '%' } }
+			]
+		}
+		Client.clients.findAll( { where: query } )
+			.then(clients => {
+				resolve(clients)
+			})
+			.catch(err => { reject('Error: ' + err) })
+	})
 }
 
 // eslint-disable-next-line no-unused-vars
