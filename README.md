@@ -1,4 +1,4 @@
-# openpharma Server 0.2.3
+# openpharma Server 0.3
 
 ## Overview
 - What does this project do?
@@ -26,10 +26,13 @@
 
 ## Last Update
 
-### 0.2.3
-  - ✅ Bump to 0.2.3
+### 0.3
+  - ✅ Bump to 0.3
   - ⬆️ Updates all depedencies
-  - 🚧 Splitting of db queries from api
+  - ✅ Important Changes made in the architecture of the API and DB communications
+  - 🚧 Splitting of db queries from api into new set of files
+  - 🔨 Correction when saving client
+  - ⚡ Creating and using DB Associations of tables
 
 [Complete changelog](https://github.com/Bworld-Studio/openpharma/blob/main/CHANGELOG.md)
 

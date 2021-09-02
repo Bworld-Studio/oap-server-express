@@ -1,3 +1,11 @@
+### 0.3
+  - ✅ Bump to 0.3
+  - ⬆️ Updates all depedencies
+  - ✅ Important Changes made in the architecture of the API and DB communications
+  - 🚧 Splitting of db queries from api into new set of files
+  - 🔨 Correction when saving client
+  - ⚡ Creating and using DB Associations of tables
+
 ### 0.2.3
   - ✅ Bump to 0.2.3
   - ⬆️ Updates all depedencies
