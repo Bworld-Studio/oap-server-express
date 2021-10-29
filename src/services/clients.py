@@ -1,2 +1,2 @@
-var = 'Openpharma-server 0.2.4'
+var = 'Openpharma-server 0.3'
 print(var)

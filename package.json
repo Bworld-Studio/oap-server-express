@@ -1,10 +1,16 @@
 {
 	"name": "openpharma-server",
-	"version": "0.3",
+	"version": "0.3.0",
 	"private": true,
 	"description": "openpharma server",
 	"author": {
 		"name": "Gray Fawkes"
+	},
+	"homepage": "https://github.com/Bworld-Studio/openPharma#readme",
+	"license": "MIT",
+	"readme": "README.md",
+	"bugs": {
+		"url": "https://github.com/Bworld-Studio/openPharma/issues"
 	},
 	"scripts": {
 		"debug": "nodemon --inspect ./src/server.js",
@@ -13,17 +19,17 @@
 	},
 	"main": "server.js",
 	"dependencies": {
-		"axios": "^0.21.1",
+		"axios": "^0.24.0",
 		"express": "^4.17.1",
 		"fs": "0.0.1-security",
-		"node-stream-zip": "^1.14.0",
+		"node-stream-zip": "^1.15.0",
 		"path": "^0.12.7",
 		"pg": "^8.7.1",
-		"sequelize": "^6.6.5"
+		"sequelize": "^6.8.0"
 	},
 	"devDependencies": {
-		"eslint": "^7.32.0",
-		"nodemon": "^2.0.12",
+		"eslint": "^8.1.0",
+		"nodemon": "^2.0.14",
 		"sequelize-cli": "^6.2.0"
 	},
 	"eslintConfig": {
@@ -44,12 +50,6 @@
 		"last 2 versions",
 		"not dead"
 	],
-	"bugs": {
-		"url": "https://github.com/Bworld-Studio/openPharma/issues"
-	},
-	"homepage": "https://github.com/Bworld-Studio/openPharma#readme",
-	"license": "MIT",
-	"readme": "README.md",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/Bworld-Studio/openPharma.git"

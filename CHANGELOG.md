@@ -1,3 +1,9 @@
+### 0.3.1
+  - ✅ Bump to 0.3.1
+  - ⬆️ Updates all depedencies
+  - 🚧 Splitting of db queries from api into stores files
+  - 🚧 Start working on Product view
+
 ### 0.3
   - ✅ Bump to 0.3
   - ⬆️ Updates all depedencies
