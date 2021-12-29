@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize')
-const dbG = require('../plugins/postgre-connector')
+const dbG = include('plugins/postgre-connector')
 
 // Identification
 const clients_id = dbG.sequelize.define('clients_id', {

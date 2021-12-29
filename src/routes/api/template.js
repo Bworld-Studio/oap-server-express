@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const Template = require('../../models/Template')
+const Template = include('models/Template')
 
 // Récupérer tous les enregistrements ou uniquement correspondant à une requête
 router.get('/template', (req, res) => {

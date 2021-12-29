@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize')
-const dbG = require('../plugins/postgre-connector')
+const dbG = include('plugins/postgre-connector')
 
 const bdpm_cis = dbG.sequelize.define('bdpm_cis', { // eslint-disable-line no-alert, no-unused-vars
 	cis: { type: Sequelize.INTEGER, primaryKey: true },

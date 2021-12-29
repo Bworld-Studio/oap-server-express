@@ -1,5 +1,5 @@
 // const Sequelize = require('sequelize')
-// const dbG = require('../plugins/postgre-connector')
+// const dbG = include('plugins/postgre-connector')
 
 // const ordersH = dbG.sequelize.define('ordersH', { // eslint-disable-line no-alert, no-unused-vars
 // 	id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },

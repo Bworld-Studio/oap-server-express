@@ -1,4 +1,4 @@
-# openpharma Server 0.3
+# openpharma Server 0.3.2
 
 ## Overview
 - What does this project do?
@@ -26,13 +26,14 @@
 
 ## Last Update
 
-### 0.3
-  - ✅ Bump to 0.3
+### 0.3.2
+  - ✅ Bump to 0.3.2
   - ⬆️ Updates all depedencies
-  - ✅ Important Changes made in the architecture of the API and DB communications
-  - 🚧 Splitting of db queries from api into new set of files
-  - 🔨 Correction when saving client
-  - ⚡ Creating and using DB Associations of tables
+  - ❌ Remove unecessary depedencies
+  - 👕 Implement "include" function to use relative paths instead of absolute in the "require" function
+  - 🚧 Splitting db queries from Api files into Services Files
+  - 🚧 Start working on Product view
+  - 🔑 Start the use of .env files
 
 [Complete changelog](https://github.com/Bworld-Studio/openpharma/blob/main/CHANGELOG.md)
 

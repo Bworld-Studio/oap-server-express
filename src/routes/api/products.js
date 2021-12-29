@@ -1,10 +1,12 @@
+/* eslint-disable no-unused-vars */
 const express = require('express')
 const router = express.Router()
 
+// const productsService = include('services/products')
+
 const { Op } = require('sequelize')
 
-const BDPM = require('../../models/BDPM')
-// const BdM_IT = require('../models/BdM_IT')
+const BDPM = include('models/BDPM')
 
 // Get all Products
 router.get('/products', (req, res) => {
@@ -23,7 +25,8 @@ router.get('/products', (req, res) => {
 		BDPM.bdpm_cis.findAll( { where: query })
 			.then(products => {
 				res.json(products) })
-			.catch(err => { res.send('Error: ' + err) })
+			// deepcode ignore XSS: <please specify a reason of ignoring this>, deepcode ignore XSS: <please specify a reason of ignoring this>
+   .catch(err => { res.send('Error: ' + err) })
 	}
 	else {
 		BDPM.bdpm_cis.findAll()
@@ -38,9 +41,11 @@ router.get('/products/:cis', (req, res) => {
 		.findByPk(req.params.cis)
 		// .findOne({ where: {cis: req.body.cis},})
 		.then(product => { res.json(product) })
-		.catch(err => { res.send('Error: ' + err) })
+		// deepcode ignore XSS: <please specify a reason of ignoring this>
+  .catch(err => { res.send('Error: ' + err) })
 })
-// Add Client
+
+// Add Product
 router.post('/products', (req, res) => {
 	if (!req.body.numSS) {
 		res.status(400)
@@ -50,6 +55,15 @@ router.post('/products', (req, res) => {
 			.create(req.body).then(() => { res.send('Product Added')})
 			.catch(err => { res.send('error: ' + err) })
 	}
+})
+
+router.get('/products/notice/:cis', (req, res) => {
+	res.json(req.params)
+	// BDPM.bdpm_cis
+	// 	.findByPk(req.params.cis)
+	// 	// .findOne({ where: {cis: req.body.cis},})
+	// 	.then(product => { res.json(product) })
+	// 	.catch(err => { res.send('Error: ' + err) })
 })
 
 
@@ -68,7 +82,7 @@ router.post('/products', (req, res) => {
 // 		})
 // });
 
-// Update Client
+// Update Product
 router.put('/products/:cip', (req, res) => {
 	if (!req.body.cip) {
 		res.status(400)
@@ -82,7 +96,8 @@ router.put('/products/:cip', (req, res) => {
 		)
 			.then(() => {
 				res.send('Product updated')
-			})
+			// deepcode ignore XSS: <please specify a reason of ignoring this>
+   })
 			.error(err => res.send(err))
 	}
 })

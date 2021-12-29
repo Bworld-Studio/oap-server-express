@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const files = require('../../exts/files')
+const files = include('exts/files')
 
 router.put('/updates/:file', (req, res) => { // eslint-disable-line no-alert, no-unused-vars
 	files.readFile(req.params.file)

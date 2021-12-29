@@ -1,10 +1,10 @@
 const express = require('express')
 const router = express.Router()
 
-// const Template = require('../models/Template')
+const path = '/status'
 
 // Get orders
-router.get('/status', (req, res) => {
+router.get(path, (req, res) => {
 	res.json(200)
 })
 

@@ -2,7 +2,7 @@
 const express = require('express')
 const router = express.Router()
 
-// const models = require('../stores/models') // eslint-disable-line no-unused-vars
+// const models = include('stores/models')
 
 router.get('/models', (req, res) => {
 	// models.getClients(req.query.search).then( clients => {

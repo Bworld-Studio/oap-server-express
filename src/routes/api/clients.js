@@ -2,29 +2,26 @@
 const express = require('express')
 const router = express.Router()
 
-// const { Op } = require('sequelize')
-
-// const Client = require('../../models/Client')
-const clients = require('../stores/clients') // eslint-disable-line no-unused-vars
-// const clientService = require('../../../services/clients')
+const clientsService = include('services/clients')
+const path = '/clients'
 
 // Get all Clients
-router.get('/clients', (req, res) => {
-	clients.getClients(req.query.search).then( clients => {
+router.get(path, (req, res) => {
+	clientsService.getClients(req.query.search).then( clients => {
 		res.json(clients)
 	})
 })
 
 // Add Client
 router.post('/clients', (req, res) => {
-	clients.createClient(req.body)
+	clientsService.createClient(req.body)
 		.then( response => res.send(response) )
 		.catch(error => res.send(error))
 })
 
 // Get Client
-router.get('/clients/:uuid', (req, res) => {
-	clients.getClient(req)
+router.get(path+'/:uuid', (req, res) => {
+	clientsService.getClient(req)
 		.then( client => {
 			res.json(client)
 		})
@@ -49,7 +46,7 @@ router.get('/clients/:uuid', (req, res) => {
 // })
 
 // Update Client
-router.put('/clients/:uuid', (req, res) => {
+router.put(path+'/:uuid', (req, res) => {
 	// if (!req.body) {
 	// 	res.status(400)
 	// 	res.json({

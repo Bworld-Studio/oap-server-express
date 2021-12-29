@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize')
-const dbG = require('../plugins/postgre-connector')
+const dbG = include('plugins/postgre-connector')
 
 const updates_logs = dbG.sequelize.define('updates_logs', { // eslint-disable-line no-alert, no-unused-vars
 	file: { type: Sequelize.TEXT, primaryKey: true },

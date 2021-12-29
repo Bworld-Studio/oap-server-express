@@ -14,17 +14,14 @@ const files = [
 	{ name: 'cpd', url: 'http://base-donnees-publique.medicaments.gouv.fr/telechargement.php?fichier=CIS_CPD_bdpm.txt', folder: '/bdpm/tmp'}
 ]
 
-// const http = require('http')
 const Fs = require('fs')
 const Path = require('path')
 
 // import Utils from ('../utils')
-const { downloadFromURL } = require('../utils')
-// const BDPM = require('./src/models/BDPM')
-// const Common = require('./src/models/Common')
+const { downloadFromURL } = include('exts/utils')
 
-const BDPM = include('models/BDPM') // eslint-disable-line no-undef
-const Common = include('models/Common') // eslint-disable-line no-undef
+const BDPM = include('models/BDPM')
+const Common = include('models/Common')
 
 const uploadFileToDB = function(filename) {
 	return new Promise((resolve, reject) => {
