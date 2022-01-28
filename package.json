@@ -30,7 +30,7 @@
 		"sequelize": "^6.12.4"
 	},
 	"devDependencies": {
-		"eslint": "^8.5.0",
+		"eslint": "^8.8.0",
 		"sequelize-cli": "^6.3.0"
 	},
 	"eslintConfig": {
