@@ -1,3 +1,8 @@
+### 0.3.3
+  - ✅ Bump to 0.3.3
+  - ⬆️ Updates all depedencies
+  - 🔑 Start the use of .env files
+
 ### 0.3.2
   - ✅ Bump to 0.3.2
   - ⬆️ Updates all depedencies

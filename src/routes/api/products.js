@@ -22,11 +22,10 @@ router.get('/products', (req, res) => {
 				cis: search
 			}
 		}
-		BDPM.bdpm_cis.findAll( { where: query })
+		BDPM.bdpm_cis.findAll( { where: query } )
 			.then(products => {
 				res.json(products) })
-			// deepcode ignore XSS: <please specify a reason of ignoring this>, deepcode ignore XSS: <please specify a reason of ignoring this>
-   .catch(err => { res.send('Error: ' + err) })
+			.catch(err => { res.send('Error: ' + err) })
 	}
 	else {
 		BDPM.bdpm_cis.findAll()
