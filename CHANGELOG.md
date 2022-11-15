@@ -1,3 +1,8 @@
+### 0.4.0
+  - ✅ Bump to 0.4.0
+  - 🚧 Update name repository
+  - ⬆️ Updates all depedencies
+	
 ### 0.3.3
   - ✅ Bump to 0.3.3
   - ⬆️ Updates all depedencies

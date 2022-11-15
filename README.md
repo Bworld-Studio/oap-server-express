@@ -1,4 +1,4 @@
-# openpharma Server 0.3.3
+# oph server express 0.4.0
 
 ## Overview
 - What does this project do?
@@ -26,10 +26,10 @@
 
 ## Last Update
 
-### 0.3.3
-  - ✅ Bump to 0.3.3
+### 0.4.0
+  - ✅ Bump to 0.4.0
+  - 🚧 Update name repository
   - ⬆️ Updates all depedencies
-  - 🔑 Start the use of .env files
 
 [Complete changelog](https://github.com/Bworld-Studio/openpharma/blob/main/CHANGELOG.md)
 
