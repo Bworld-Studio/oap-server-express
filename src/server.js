@@ -1,4 +1,13 @@
- const express = require('express')
+// Absolute paths
+global.base_dir = __dirname // eslint-disable-line no-undef
+global.abs_path = function(path) {
+	return base_dir + path // eslint-disable-line no-undef
+}
+global.include = function(file) {
+	return require(abs_path('/' + file)) // eslint-disable-line no-undef
+}
+
+const express = require('express')
 const pjson = require('../package.json')
 const dotenv = require('dotenv')
 // const https = require('https')
@@ -18,14 +27,7 @@ app.use(cors(corsOptions))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-// Absolute paths
-global.base_dir = __dirname // eslint-disable-line no-undef
-global.abs_path = function(path) {
-	return base_dir + path // eslint-disable-line no-undef
-}
-global.include = function(file) {
-	return require(abs_path('/' + file)) // eslint-disable-line no-undef
-}
+
 
 // Declare routes
 include('routes/routes')(app)
